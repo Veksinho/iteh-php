@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <title>Barbershop I.N.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -139,8 +139,6 @@
                 url: 'vratiKombo.php',
                 success: function (data) {
                     $("#usluga").html(data);
-                    //$("#pretraga").html(data);
-                    // pretrazi();
                 }
             });
         }
@@ -170,7 +168,6 @@
                 data: podaci,
                 success: function (data) {
                     $("#odgovorUnos").html(data);
-                    // pretrazi();
                     vratiKomboUsluga();
                 }
             });
@@ -190,7 +187,6 @@
                 success: function (data) {
                     console.log(data);
                     $("#odgovorIzmena").html(data);
-                    // pretrazi();
                 }
             });
         }
@@ -206,8 +202,6 @@
                 data: podaci,
                 success: function (data) {
                     $("#odgovorBrisanje").html(data);
-
-
                 }
             });
         }

@@ -35,7 +35,7 @@ class DBBroker
 
     public function vratiSveRezervacije()
     {
-        $upit = "SELECT * FROM rezervacija r join usluga u on r.idUsluga = u.uslugaID";
+        $upit = "SELECT * FROM rezervacija r join usluga u on r.idUsluge = u.uslugaID";
 
         $rs = $this->mysqli->query($upit);
         $rezervacije = [];
@@ -47,6 +47,6 @@ class DBBroker
 
     public function izmeniRezervaciju($rezervacijaID, $datum, $cena)
     {
-        return $this->mysqli->query("UPDATE rezervacija SET datum = '" . $datum .  "', cena = '" .$cena ."' WHERE id = '" . $rezervacijaID."'");
+        return $this->mysqli->query("UPDATE rezervacija SET Datum = '" . $datum .  "', Cena = '" .$cena ."' WHERE id = '" . $rezervacijaID."'");
     }
 }

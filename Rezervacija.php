@@ -9,7 +9,7 @@ class Rezervacija
     
 
     /**
-     * Film constructor.
+     * Rezervacija constructor.
      * @param $id
      * @param $Klijent
      * @param $Datum
