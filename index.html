@@ -157,9 +157,10 @@
         function dodajRezervaciju() {
             let podaci = {
                 klijent: $("#klijent").val(),
+                cena: $("#cena").val(),
                 datum: $("#datum").val(),
                 usluga: $("#usluga").val(),
-                cena: $("#cena").val()
+                
             };
 
             $.ajax({
@@ -168,6 +169,10 @@
                 data: podaci,
                 success: function (data) {
                     $("#odgovorUnos").html(data);
+                    $("#klijent").val(''),
+                    $("#cena").val(''),
+                    $("#datum").val(''),
+                    $("#usluga").val(''),
                     vratiKomboUsluga();
                 }
             });

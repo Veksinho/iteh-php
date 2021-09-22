@@ -7,7 +7,7 @@ $usluga =  strip_tags($_POST['usluga']);
 $cena = strip_tags($_POST['cena']);
 
 
-$rezervacija = new Rezervacija(null,$klijent, $cena, new Usluga($usluga,null), $datum);
+$rezervacija = new Rezervacija(null,$klijent, $datum, new Usluga($usluga,null), $cena);
 $sacuvano = $db->dodajRezervaciju($rezervacija);
 
 if($sacuvano){
