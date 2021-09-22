@@ -28,8 +28,6 @@ class DBBroker
         $rezervacija->getDatum() ."')");
     }
 
- 
-
     public function obrisiRezervaciju($id)
     {
         return $this->mysqli->query("DELETE FROM rezervacija WHERE id = '" . $id."'");

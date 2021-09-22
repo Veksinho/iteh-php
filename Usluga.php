@@ -5,7 +5,7 @@ class Usluga
     private $nazivUsluge;
 
     /**
-     * Zanr constructor.
+     * Usluga constructor.
      * @param $uslugaID
      * @param $nazivUsluge
      */
