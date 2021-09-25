@@ -28,7 +28,7 @@
     </style>
 </head>
 
-<body style="background-image: url(image/slika1.jpg)">
+<body style="background-image: url(image/slika.jpg)">
     <header>
         <nav style="background-color:rgb(231, 186, 62)">
             <div class="container1">
@@ -191,6 +191,8 @@
                 data: podaci,
                 success: function (data) {
                     console.log(data);
+                    $("#datumIzmena").val(''),
+                    $("#cenaIzmena").val('')
                     $("#odgovorIzmena").html(data);
                 }
             });
@@ -207,6 +209,7 @@
                 data: podaci,
                 success: function (data) {
                     $("#odgovorBrisanje").html(data);
+                    $("#rezervacijaBrisanje").val('')
                 }
             });
         }
